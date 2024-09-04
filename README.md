@@ -1,4 +1,4 @@
-# File Storage Service
+# File Server
 
 ## Overview
 
