@@ -6,7 +6,7 @@ This is a Spring Boot application that provides file storage and management func
 
 ## Features
 
-- **File Upload**: Upload images and store them in a designated directory.
+- **File Upload**: Upload images, compress and store them in a designated directory.
 - **File Retrieval**: Retrieve files based on their name.
 - **File Deletion**: Delete files from storage.
 - **File Metadata**: Save and manage file metadata in a PostgreSQL database.
@@ -30,19 +30,12 @@ This is a Spring Boot application that provides file storage and management func
 ### File Endpoints
 
 - **Upload File**: `POST /api/files/upload`
-  - **Description**: Upload an image file and store it in the configured directory.
+  - **Description**: Upload an image file, compress and store it in the configured directory.
   - **Request**:
     - **Headers**: `Content-Type: multipart/form-data`
     - **Form-data**:
       - `file` (required) - The file to be uploaded.
   - **Authentication**: Required
-
-- **Retrieve File**: `GET /api/files/{filename}`
-  - **Description**: Retrieve a file based on its filename.
-  - **Path Parameter**:
-    - `filename` - The name of the file to retrieve.
-  - **Authentication**: Required
-  - **Response**: The file content.
 
 - **Delete File**: `DELETE /api/files/{filename}`
   - **Description**: Delete a file based on its filename.
